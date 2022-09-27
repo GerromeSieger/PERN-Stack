@@ -29,11 +29,11 @@ const initOptions = {
 
 // Database connection parameters:
 const config = {
-  host: 'localhost',
+  host: 'postgres',
   port: 5432,
   database: 'PERN-Starter',
   user: 'postgres',
-  password: process.env.db_password
+  password: 'postgres'
 };
 
 // Load and initialize pg-promise:

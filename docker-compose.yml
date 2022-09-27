@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  backend:
+    image: node:16.15.1-alpine
+    command: npm start 
+    ports:
+      - "3000:3000"
+    depends_on:
+      - "postgres"
+
+  client:
+    build: .
+    ports:
+      - "80:80"
+
+  postgres:
+    image: postgres:12.12-alpine
+    ports: 
+      - "5432:5432"
+    env_file: ./.env
+    environment:
+      - POSTGRES_USER:$PG_USER
+      - POSTGRES_PASSWORD=$PG_PASSWORD
+      - POSTGRES_DB=$PG_DATABASE
+    stdin_open: true
