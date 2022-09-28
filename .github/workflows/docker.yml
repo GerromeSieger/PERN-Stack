@@ -22,9 +22,16 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
           
-      - name: Build and push
+      - name: Build and push client
         uses: docker/build-push-action@v3
         with:
           context: .
           push: true
-          tags: gerrome/pern-stack:1
+          tags: gerrome/pern-stack_client:1
+
+      - name: Build and push server
+        uses: docker/build-push-action@v3
+        with:
+          context: ./server
+          push: true
+          tags: gerrome/pern-stack_server:1
