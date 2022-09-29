@@ -3,7 +3,7 @@ version: '3'
 services:
   server:
     image: gerrome/pern-stack_server:1
-    build: ./server   
+#    build: ./server   
     ports:
       - "3000:3000"
     depends_on:
@@ -11,7 +11,7 @@ services:
 
   client:
     image: gerrome/pern-stack_client:1
-    build: .
+#    build: .
     ports:
       - "80:80"
 

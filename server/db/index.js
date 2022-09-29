@@ -40,7 +40,7 @@ const config = {
 const pgp = require('pg-promise')(initOptions);
 
 // Create the database instance:
-const db = pgp(process.env.DATABASE_URL || config);
+const db = pgp('postgresql://postgres:5432/pern/' || config);
 
 // Load and initialize optional diagnostics:
 const diagnostics = require('./diagnostics');
