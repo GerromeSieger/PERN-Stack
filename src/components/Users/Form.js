@@ -31,7 +31,7 @@ class ConnectedForm extends Component {
   handleSubmit(event) {
     event.preventDefault();
     const data = this.state;
-    axios.post('/api/users/add', data)
+    axios.post('http://victorifah.20.84.39.184.nip.io/api/users/add', data)
       .then((response) => {
         this.props.addUser(response.data);
       })
