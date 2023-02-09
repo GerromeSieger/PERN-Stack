@@ -28,7 +28,7 @@ class ConnectedLoadBtn extends Component {
   }
 
   handleClick() {
-    axios.get('http://victorifah.20.84.39.184.nip.io/api/users/all')
+    axios.get(`http://victorifah.20.84.39.184.nip.io/api/users/all`)
       .then((response) => {
         console.log(response);
         response.data.forEach((user) => {
