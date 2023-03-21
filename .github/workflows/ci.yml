@@ -35,3 +35,10 @@ jobs:
           context: ./server
           push: true
           tags: gerrome/pern-stack_server:1
+
+      - name: Build and push db
+        uses: docker/build-push-action@v3
+        with:
+          context: ./postgres
+          push: true
+          tags: gerrome/pern-stack_postgres:1
