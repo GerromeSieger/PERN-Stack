@@ -22,3 +22,5 @@ CREATE TABLE public.users
     password character varying(200),
     PRIMARY KEY (user_id)
 );
+
+INSERT INTO public.users (user_id, first_name, email, password) VALUES (1, 'Victor', 'vsifah@gmail.com', 'unekwu');
