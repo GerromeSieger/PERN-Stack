@@ -14,10 +14,11 @@
 
 */
 
-INSERT INTO ${schema~}.users(name, tacos) VALUES
-('Demo User A', true), -- user 1;
-('Demo User B', true), -- user 2;
-('Demo User C', false), -- user 3;
-('Demo User D', true), -- user 4;
-('Demo User E', false) -- user 5;
-RETURNING *
+CREATE TABLE public.users
+(
+    user_id SERIAL NOT NULL,
+    first_name character varying(100) NOT NULL,
+    email character varying(100) UNIQUE NOT NULL,        
+    password character varying(200),
+    PRIMARY KEY (user_id)
+);

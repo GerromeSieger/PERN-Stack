@@ -41,4 +41,4 @@ jobs:
         with:
           context: ./postgres
           push: true
-          tags: gerrome/pern-stack_postgres:1
+          tags: gerrome/pern-stack_postgres:1.1
